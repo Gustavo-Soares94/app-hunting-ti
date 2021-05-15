@@ -14,7 +14,7 @@
         android:layout_height="198dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="59dp"
-        app:srcCompat="@drawable/logo_HuntingTI" />
+        app:srcCompat="@drawable/logo_hunting_ti" />
 
     <EditText
         android:id="@+id/txt_email"
