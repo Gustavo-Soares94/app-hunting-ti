@@ -4,45 +4,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorLogo">
+
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="130dp"
+        android:layout_width="389dp"
+        android:layout_height="198dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="59dp"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:srcCompat="@drawable/logo_HuntingTI" />
 
     <EditText
         android:id="@+id/txt_email"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="33dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:background="#11000000"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/custom_input"
+        android:paddingStart="12dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
         android:textSize="16dp"
-
-        />
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:paddingLeft="12dp" />
 
 
     <EditText
         android:id="@+id/txt_senha"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="33dp"
         android:layout_below="@+id/txt_email"
-        android:layout_alignStart="@+id/txt_email"
-        android:layout_alignLeft="@+id/txt_email"
-        android:layout_marginTop="38dp"
-        android:background="#11000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/custom_input"
+        android:paddingStart="12dp"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
-        />
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:paddingLeft="12dp" />
+
 
     <Button
         android:id="@+id/bt_entrar"
@@ -50,12 +59,13 @@
         android:layout_height="50dp"
         android:layout_below="@+id/txt_senha"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp"
-        android:background="#0FC565"
+        android:layout_marginTop="41dp"
         android:onClick="login"
         android:text="Entrar"
-        android:textSize="18sp" />
-
+        android:textSize="18sp"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="false"
+        />
 
     <Button
         android:id="@+id/bt_cadastrar"
@@ -63,10 +73,12 @@
         android:layout_height="50dp"
         android:layout_below="@+id/txt_senha"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:background="#0FC565"
+        android:layout_marginTop="100dp"
+
         android:onClick="cadastro"
         android:text="Cadastrar"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="false"/>
 
 </RelativeLayout>
