@@ -18,10 +18,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-
     private EditText editEmail;
     private EditText editSenha;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
     private void updtateUi(FirebaseUser user){
 
         if(user!=null){
-
+            Intent i = new Intent(MainActivity.this, MenuPrincipalActivity.class);
+            startActivity(i);
         }
     }
 
