@@ -59,7 +59,7 @@ public class CadastroActivity extends AppCompatActivity {
             return;
         }
 
-        if(email.equals("")){
+        if(senha.equals("")){
             editSenha.setError("Preencha este campo!");
             editSenha.requestFocus();
             return;
