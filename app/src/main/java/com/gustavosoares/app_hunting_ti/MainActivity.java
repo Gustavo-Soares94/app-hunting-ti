@@ -1,5 +1,4 @@
 package com.gustavosoares.app_hunting_ti;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mAuth = FirebaseAuth.getInstance();
 
         editEmail = findViewById(R.id.txt_email);
@@ -46,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         if(user!=null){
             Intent i = new Intent(MainActivity.this, MenuPrincipalActivity.class);
             startActivity(i);
+
         }
     }
 
