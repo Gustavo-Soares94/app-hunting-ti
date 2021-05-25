@@ -78,10 +78,11 @@
         android:layout_below="@+id/cadSenha"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
+        android:background="@drawable/custom_button"
         android:onClick="salvar"
         android:text="Salvar"
+        android:textAllCaps="false"
         android:textSize="18sp"
-        android:background="@drawable/custom_button"
-        android:textAllCaps="false"/>
+        app:backgroundTint="@color/botoes" />
 
 </RelativeLayout>

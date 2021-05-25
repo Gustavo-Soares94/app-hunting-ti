@@ -4,6 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuPrincipalActivity">
+    android:background="@color/colorLogo"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/bt_entrar"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/custom_button"
+        android:onClick="login"
+        android:text="Agenda de Contatos"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:backgroundTint="@color/botoes"
+        app:iconTint="@color/botoes"
+        app:rippleColor="@color/botoes" />
+
+    <Button
+        android:id="@+id/bt_cadastrar"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+
+        android:background="@drawable/custom_button"
+        android:onClick="cadastro"
+        android:text="Lista de Tarefas"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:backgroundTint="@color/botoes"
+        app:iconTint="@color/botoes"
+        app:rippleColor="@color/botoes" />
 
 </RelativeLayout>
