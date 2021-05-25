@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".ContatosActivity">
+
+    <ImageView
+        android:id="@+id/cts_imagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="253dp"
+        android:layout_marginRight="253dp"
+        android:layout_marginBottom="426dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/cts_nome"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@id/cts_imagem"
+        android:layout_alignLeft="@id/cts_imagem"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="171dp"
+        android:layout_marginLeft="171dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="503dp"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/cts_cargo"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/cts_nome"
+        android:layout_alignStart="@+id/cts_nome"
+        android:layout_alignLeft="@+id/cts_nome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="450dp" />
+
+    <EditText
+        android:id="@+id/cts_fone"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="223dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/cts_cep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:layout_alignRight="@+id/cts_fone"
+        android:layout_alignLeft="@id/cts_fone"
+        android:layout_below="@id/cts_fone"/>
+
+    <EditText
+        android:id="@+id/cidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_alignLeft="@id/cts_cep"
+        android:layout_alignRight="@id/cts_cep"
+        android:layout_below="@id/cts_cep"/>
+
+    <EditText
+        android:id="@+id/cts_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_alignRight="@id/cidade"
+        android:layout_alignLeft="@id/cidade"
+        android:layout_below="@id/cidade"/>
+
+    <Button
+        android:id="@+id/cts_btn_salvar"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/cts_email"
+        android:layout_alignLeft="@id/cts_email"
+        android:layout_alignRight="@id/cts_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/custom_button"
+        android:text="Salvar"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+</RelativeLayout>

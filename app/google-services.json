@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010220127178",
+    "project_id": "app-hunting-ti",
+    "storage_bucket": "app-hunting-ti.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010220127178:android:3d76c9108e3d917fcf7533",
+        "android_client_info": {
+          "package_name": "com.gustavosoares.app_hunting_ti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010220127178-rp0queg1ckean49g2tj77j123tnfnlfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2LfJ04upwoYo5eLTQzRx9aTgr32aXGVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010220127178-rp0queg1ckean49g2tj77j123tnfnlfp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

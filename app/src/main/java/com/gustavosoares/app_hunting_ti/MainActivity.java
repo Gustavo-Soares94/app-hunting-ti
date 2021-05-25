@@ -1,47 +1,84 @@
 package com.gustavosoares.app_hunting_ti;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
+    private EditText editEmail;
+    private EditText editSenha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btLogin = (Button) findViewById(R.id.bt_login);
-        btLogin.setOnClickListener(new View.OnClickListener() {
+        mAuth = FirebaseAuth.getInstance();
+
+        editEmail = findViewById(R.id.txt_email);
+        editSenha = findViewById(R.id.txt_senha);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updtateUi(currentUser);
+    }
+
+    private void updtateUi(FirebaseUser user){
+
+        if(user!=null){
+            Intent i = new Intent(MainActivity.this, MenuPrincipalActivity.class);
+            startActivity(i);
+
+        }
+    }
+
+    public void login(View view){
+
+        String email = editEmail.getText().toString().trim();
+        String senha = editSenha.getText().toString().trim();
+
+        if(email.equals("")){
+            editEmail.setError("Preencha este campo!");
+            return;
+
+        }
+        if(senha.equals("")){
+            editSenha.setError("Preencha este campo!");
+            return;
+        }
+
+        mAuth.signInWithEmailAndPassword(email,senha).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
-            public void onClick(View v) {
-                EditText txtLogin = (EditText) findViewById(R.id.txt_login);
-                EditText txtSenha = (EditText) findViewById(R.id.txt_senha);
-                String login = txtLogin.getText().toString();
-                String senha = txtSenha.getText().toString();
-                if (login.equals(senha)) {
-                    Intent intent3 = new Intent(getApplicationContext(), MenuPrincipalActivity.class);
-                    startActivity(intent3);
-                } else{
-                    alert("Nome e Senha devem ser iguais");
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    updtateUi(mAuth.getCurrentUser());
+                }else{
+                    Toast.makeText(MainActivity.this,"Usuário ou senha incorreta!", Toast.LENGTH_SHORT).show();
+                    updtateUi(null);
                 }
             }
         });
     }
 
-    public void irTelaPrincipal(View view){
+    public void cadastro(View view){
 
-        Intent intent3 = new Intent(getApplicationContext(), MenuPrincipalActivity.class);
-        startActivity(intent3);
-    }
-
-    private void alert(String s){
-
-        Toast.makeText(this,s,Toast.LENGTH_LONG).show();
+        Intent i = new Intent(MainActivity.this, CadastroActivity.class);
+        startActivity(i);
     }
 
 }

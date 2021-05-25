@@ -4,9 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
+    tools:context=".CadastroActivity"
     android:background="@color/colorLogo">
-
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,12 +16,32 @@
         app:srcCompat="@drawable/logo_hunting_ti" />
 
     <EditText
-        android:id="@+id/txt_email"
+        android:id="@+id/cadUsuario"
         android:layout_width="300dp"
         android:layout_height="33dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_user"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Usuário"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:textSize="16dp" />
+
+
+    <EditText
+        android:id="@+id/cadEmail"
+        android:layout_width="300dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/cadUsuario"
+        android:layout_alignStart="@+id/cadUsuario"
+        android:layout_alignLeft="@+id/cadUsuario"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:paddingStart="12dp"
         android:ems="10"
@@ -34,14 +53,14 @@
         android:drawableLeft="@drawable/ic_email"
         android:paddingLeft="12dp" />
 
-
     <EditText
-        android:id="@+id/txt_senha"
+        android:id="@+id/cadSenha"
         android:layout_width="300dp"
         android:layout_height="33dp"
-        android:layout_below="@+id/txt_email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_below="@+id/cadEmail"
+        android:layout_alignStart="@+id/cadEmail"
+        android:layout_alignLeft="@+id/cadEmail"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:paddingStart="12dp"
         android:ems="10"
@@ -52,31 +71,15 @@
         android:drawableLeft="@drawable/ic_lock"
         android:paddingLeft="12dp" />
 
-
     <Button
-        android:id="@+id/bt_entrar"
+        android:id="@+id/btnSalvar"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/txt_senha"
+        android:layout_below="@+id/cadSenha"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
-        android:onClick="login"
-        android:text="Entrar"
-        android:textSize="18sp"
-        android:background="@drawable/custom_button"
-        android:textAllCaps="false"
-        />
-
-    <Button
-        android:id="@+id/bt_cadastrar"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/txt_senha"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-
-        android:onClick="cadastro"
-        android:text="Cadastrar"
+        android:layout_marginTop="50dp"
+        android:onClick="salvar"
+        android:text="Salvar"
         android:textSize="18sp"
         android:background="@drawable/custom_button"
         android:textAllCaps="false"/>
