@@ -4,6 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuPrincipalActivity">
+    android:background="@color/colorLogo"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/bt_lista_de_tarefas"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+
+        android:background="@drawable/custom_button"
+        android:onClick="cadastro"
+        android:text="Lista de Tarefas"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:backgroundTint="@color/botoes"
+        app:iconTint="@color/botoes"
+        app:rippleColor="@color/botoes" />
+
+    <Button
+        android:id="@+id/bt_agenda_de_contatos"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/bt_lista_de_tarefas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:onClick="login"
+        android:text="Agenda de Contatos"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:backgroundTint="@color/botoes"
+        app:iconTint="@color/botoes"
+        app:rippleColor="@color/botoes" />
+
+    <Button
+        android:id="@+id/bt_postagens"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/bt_agenda_de_contatos"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:onClick="cadastro"
+        android:text="Postagens"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:backgroundTint="@color/botoes"
+        app:iconTint="@color/botoes"
+        app:rippleColor="@color/botoes" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Bem-vindo(a)!"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="34sp" />
 
 </RelativeLayout>

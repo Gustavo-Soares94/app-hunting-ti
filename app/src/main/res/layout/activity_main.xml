@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
-    android:background="@color/colorLogo">
+    android:background="@color/colorLogo"
+    tools:context=".MainActivity">
 
 
     <ImageView
@@ -24,15 +24,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
         android:background="@drawable/custom_input"
-        android:paddingStart="12dp"
+        android:drawableStart="@drawable/ic_email"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="12dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
-        android:textSize="16dp"
-        android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="12dp"
-        android:drawableLeft="@drawable/ic_email"
-        android:paddingLeft="12dp" />
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:textSize="16dp" />
 
 
     <EditText
@@ -43,13 +43,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
         android:background="@drawable/custom_input"
-        android:paddingStart="12dp"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="12dp"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
-        android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="12dp"
-        android:drawableLeft="@drawable/ic_lock"
+        android:paddingStart="12dp"
         android:paddingLeft="12dp" />
 
 
@@ -60,12 +60,14 @@
         android:layout_below="@+id/txt_senha"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="41dp"
+        android:background="@drawable/custom_button"
         android:onClick="login"
         android:text="Entrar"
-        android:textSize="18sp"
-        android:background="@drawable/custom_button"
         android:textAllCaps="false"
-        />
+        android:textSize="18sp"
+        app:backgroundTint="@color/botoes"
+        app:iconTint="@color/botoes"
+        app:rippleColor="@color/botoes" />
 
     <Button
         android:id="@+id/bt_cadastrar"
@@ -75,10 +77,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
 
+        android:background="@drawable/custom_button"
         android:onClick="cadastro"
         android:text="Cadastrar"
+        android:textAllCaps="false"
         android:textSize="18sp"
-        android:background="@drawable/custom_button"
-        android:textAllCaps="false"/>
+        app:backgroundTint="@color/botoes"
+        app:iconTint="@color/botoes"
+        app:rippleColor="@color/botoes" />
 
 </RelativeLayout>

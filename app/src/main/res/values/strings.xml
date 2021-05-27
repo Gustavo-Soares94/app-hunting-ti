@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">app-hunting-ti</string>
+    <string name="mainactivity_name">Bem-vindo(a)!</string>
+    <string name="menuactivity_name">Menu Principal</string>
+    <string name="contatosactivity_name">Contatos</string>
+    <string name="cadastro">Contatos</string>
 </resources>
