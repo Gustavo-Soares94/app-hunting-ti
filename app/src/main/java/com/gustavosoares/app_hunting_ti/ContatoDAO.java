@@ -40,7 +40,7 @@ public class ContatoDAO extends SQLiteOpenHelper {
     public List<ContatoInfo> getList(String order){
         List<ContatoInfo> contatos = new ArrayList<>();
 
-        Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM" + TABELA + "ORDER BY nome " +
+        Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM " + TABELA + " ORDER BY nome " +
                 order + ";", null);
 
         while(cursor.moveToNext()) {
