@@ -3,10 +3,12 @@ package com.gustavosoares.app_hunting_ti;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -69,6 +71,12 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_principal,menu);
         return true;
+    }
+
+    public void irAgendaDeContatos(View view){
+
+        Intent i = new Intent(getApplicationContext(), AgendaDeContatosActivity.class);
+        startActivity(i);
     }
 
     @Override

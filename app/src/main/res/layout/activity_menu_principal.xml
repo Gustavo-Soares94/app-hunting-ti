@@ -32,13 +32,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/custom_button"
-        android:onClick="login"
         android:text="Agenda de Contatos"
+        android:onClick="irAgendaDeContatos"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:backgroundTint="@color/botoes"
         app:iconTint="@color/botoes"
-        app:rippleColor="@color/botoes" />
+        app:rippleColor="@color/botoes"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/bt_postagens"
