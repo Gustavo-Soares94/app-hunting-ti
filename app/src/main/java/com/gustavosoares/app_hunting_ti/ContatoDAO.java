@@ -1,5 +1,6 @@
 package com.gustavosoares.app_hunting_ti;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -58,5 +59,33 @@ public class ContatoDAO extends SQLiteOpenHelper {
 
         cursor.close();
         return  contatos;
+    }
+
+    public void inserirContato(ContatoInfo c){
+        ContentValues values = new ContentValues();
+
+        values.put("id", c.getId());
+        values.put("nome", c.getNome());
+        values.put("cargo", c.getCargo());
+        values.put("email", c.getEmail());
+        values.put("senioridade", c.getSenioridade());
+        values.put("fone", c.getFone());
+        values.put("foto", c.getFoto());
+
+        String[] idParaSerAlterado = {c.getId().toString()};
+        getWritableDatabase().update(TABELA, values, "id=?", idParaSerAlterado);
+
+        getWritableDatabase().insert(TABELA, null, values);
+
+    }
+
+    public void alteraContato(ContatoInfo c){
+        ContentValues values = new ContentValues();
+    }
+
+    public void apagarContato(ContatoInfo c){
+        SQLiteDatabase db = getWritableDatabase();
+        String[] args = {c.getId().toString()};
+        db.delete(TABELA, "id=?", args);
     }
 }
