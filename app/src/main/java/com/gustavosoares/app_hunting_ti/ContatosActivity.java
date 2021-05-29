@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
@@ -79,6 +80,12 @@ public class ContatosActivity extends AppCompatActivity {
                 alertaImage();
             }
         });
+
+        File imgFile = new File(contato.getFoto());
+        if(imgFile.exists()){
+            Bitmap bitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+            foto.setImageBitmap(bitmap);
+        }
 
         salvar = findViewById(R.id.salvarContato);
         salvar.setOnClickListener(new View.OnClickListener() {

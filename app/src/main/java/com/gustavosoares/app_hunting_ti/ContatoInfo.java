@@ -12,13 +12,15 @@ public class ContatoInfo implements Parcelable {
     private String email = "";
     private String foto = "";
 
+    private Long id = -1L;
+
     public ContatoInfo(){
 
     }
 
     private ContatoInfo(Parcel in){
 
-        String[] data = new String[6];
+        String[] data = new String[7];
         in.readStringArray(data);
         setNome(data[0]);
         setCargo(data[1]);
@@ -26,6 +28,7 @@ public class ContatoInfo implements Parcelable {
         setFoto(data[3]);
         setCargo(data[4]);
         setSenioridade(data[5]);
+        setId(Long.parseLong(data[6]));
 
     }
 
@@ -78,6 +81,14 @@ public class ContatoInfo implements Parcelable {
         this.foto = foto;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -87,7 +98,7 @@ public class ContatoInfo implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
 
         parcel.writeStringArray(new String[]{
-                getNome(), getCargo(), getFone(), getFoto(), getCargo(), getSenioridade()
+                getNome(), getCargo(), getFone(), getFoto(), getCargo(), getSenioridade(), String.valueOf(getId())
 
         });
 
