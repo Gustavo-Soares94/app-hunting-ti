@@ -64,6 +64,21 @@ public class ContatoDAO extends SQLiteOpenHelper {
     public void inserirContato(ContatoInfo c){
         ContentValues values = new ContentValues();
 
+        values.put("nome", c.getNome());
+        values.put("cargo", c.getCargo());
+        values.put("email", c.getEmail());
+        values.put("senioridade", c.getSenioridade());
+        values.put("fone", c.getFone());
+        values.put("foto", c.getFoto());
+
+
+        getWritableDatabase().insert(TABELA, null, values);
+
+    }
+
+    public void alteraContato(ContatoInfo c){
+        ContentValues values = new ContentValues();
+
         values.put("id", c.getId());
         values.put("nome", c.getNome());
         values.put("cargo", c.getCargo());
@@ -72,15 +87,11 @@ public class ContatoDAO extends SQLiteOpenHelper {
         values.put("fone", c.getFone());
         values.put("foto", c.getFoto());
 
+
         String[] idParaSerAlterado = {c.getId().toString()};
         getWritableDatabase().update(TABELA, values, "id=?", idParaSerAlterado);
 
-        getWritableDatabase().insert(TABELA, null, values);
 
-    }
-
-    public void alteraContato(ContatoInfo c){
-        ContentValues values = new ContentValues();
     }
 
     public void apagarContato(ContatoInfo c){

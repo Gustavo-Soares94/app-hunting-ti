@@ -13,7 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Apphuntingti">
-        <activity android:name=".AgendaDeContatosActivity"></activity>
+
+        <activity
+            android:name=".AgendaDeContatosActivity"
+            android:label="Agenda De Contados"
+            android:parentActivityName=".MenuPrincipalActivity"
+        />
+
         <activity
             android:name=".ContatosActivity"
             android:label="@string/contatosactivity_name"
@@ -28,9 +34,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MenuPrincipalActivity"
             android:label="@string/menuactivity_name" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/mainactivity_name" />

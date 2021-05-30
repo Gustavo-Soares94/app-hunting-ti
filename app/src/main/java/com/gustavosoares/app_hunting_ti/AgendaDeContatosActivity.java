@@ -2,6 +2,8 @@ package com.gustavosoares.app_hunting_ti;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ import java.util.List;
 public class AgendaDeContatosActivity extends AppCompatActivity {
 
     private ContatoDAO helper;
+    private RecyclerView contatosRecy;
+    private ContatoAdapter adapter;
 
     private List<ContatoInfo>listaContatos;
 
@@ -27,6 +31,15 @@ public class AgendaDeContatosActivity extends AppCompatActivity {
 
         helper = new ContatoDAO(this);
         listaContatos = helper.getList("ASC");
+
+        contatosRecy = findViewById(R.id.contatosRecy);
+        contatosRecy.setHasFixedSize(true);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        contatosRecy.setLayoutManager(llm);
+
+        adapter = new ContatoAdapter(listaContatos);
+        contatosRecy.setAdapter(adapter);
 
     }
 
@@ -45,12 +58,16 @@ public class AgendaDeContatosActivity extends AppCompatActivity {
             ContatoInfo contatoInfo = data.getParcelableExtra("contato");
             helper.inserirContato(contatoInfo);
             listaContatos = helper.getList("ASC");
+            adapter = new ContatoAdapter(listaContatos);
+            contatosRecy.setAdapter(adapter);
 
         } else if (requestCode == REQUEST_ALTER && resultCode == RESULT_OK) {
 
             ContatoInfo contatoInfo = data.getParcelableExtra("contato");
             helper.alteraContato(contatoInfo);
             listaContatos = helper.getList("ASC");
+            adapter = new ContatoAdapter(listaContatos);
+            contatosRecy.setAdapter(adapter);
         }
 
     }

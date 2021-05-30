@@ -32,7 +32,6 @@ public class ContatoInfo implements Parcelable {
 
     }
 
-
     public String getSenioridade() {
         return senioridade;
     }
