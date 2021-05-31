@@ -10,6 +10,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.List;
@@ -26,6 +28,8 @@ public class AgendaDeContatosActivity extends AppCompatActivity {
     private final int REQUEST_NEW = 1;
     private final int REQUEST_ALTER = 2;
 
+    private String order = "ASC";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +37,7 @@ public class AgendaDeContatosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_agenda_de_contatos);
 
         helper = new ContatoDAO(this);
-        listaContatos = helper.getList("ASC");
+        listaContatos = helper.getList(order);
 
         contatosRecy = findViewById(R.id.contatosRecy);
         contatosRecy.setHasFixedSize(true);
@@ -70,7 +74,7 @@ public class AgendaDeContatosActivity extends AppCompatActivity {
 
             ContatoInfo contatoInfo = data.getParcelableExtra("contato");
             helper.inserirContato(contatoInfo);
-            listaContatos = helper.getList("ASC");
+            listaContatos = helper.getList(order);
             adapter = new ContatoAdapter(listaContatos);
             contatosRecy.setAdapter(adapter);
 
@@ -78,7 +82,7 @@ public class AgendaDeContatosActivity extends AppCompatActivity {
 
             ContatoInfo contatoInfo = data.getParcelableExtra("contato");
             helper.alteraContato(contatoInfo);
-            listaContatos = helper.getList("ASC");
+            listaContatos = helper.getList(order);
             adapter = new ContatoAdapter(listaContatos);
             contatosRecy.setAdapter(adapter);
         }
@@ -112,6 +116,29 @@ public class AgendaDeContatosActivity extends AppCompatActivity {
                     }
                 });
         builder.create().show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_agenda,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.order_az){
+            order = "ASC";
+        } else if(id == R.id.order_za){
+            order = "DESC";
+        }
+
+        listaContatos = helper.getList(order);
+        adapter = new ContatoAdapter(listaContatos);
+        contatosRecy.setAdapter(adapter);
+
+        return true;
     }
 
 }
