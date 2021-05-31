@@ -1,11 +1,14 @@
 package com.gustavosoares.app_hunting_ti;
 
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -41,6 +44,16 @@ public class AgendaDeContatosActivity extends AppCompatActivity {
         adapter = new ContatoAdapter(listaContatos);
         contatosRecy.setAdapter(adapter);
 
+        //criar o click Listener
+
+        contatosRecy.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(),
+                new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        abrirOpcoes(listaContatos.get(position));
+                    }
+                }));
+
     }
 
     public void addContato(View view){
@@ -71,4 +84,34 @@ public class AgendaDeContatosActivity extends AppCompatActivity {
         }
 
     }
+
+    private void abrirOpcoes(ContatoInfo contato){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(contato.getNome());
+        builder.setItems(new CharSequence[]{"Ligar", "Editar", "Excluir"},
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        switch (i){
+                            case 0:
+                                Intent intent = new Intent(Intent.ACTION_DIAL);
+                                intent.setData(Uri.parse("tel:" + contato.getFone()));
+                                startActivity(intent);
+                                break;
+                            case 1:
+                                Intent intent1 = new Intent(AgendaDeContatosActivity.this, ContatosActivity.class);
+                                intent1.putExtra("contato", contato);
+                                startActivityForResult(intent1, REQUEST_ALTER);
+                                break;
+                            case 2:
+                                listaContatos.remove(contato);
+                                helper.apagarContato(contato);
+                                adapter.notifyDataSetChanged();
+                                break;
+                        }
+                    }
+                });
+        builder.create().show();
+    }
+
 }
