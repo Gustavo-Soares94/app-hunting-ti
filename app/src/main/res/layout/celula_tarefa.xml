@@ -20,12 +20,9 @@
         android:id="@+id/textoPrazo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textoTarefa"
         android:layout_below="@+id/textoTarefa"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="0dp"
         android:layout_marginBottom="10dp"
-        android:text="19/05/2018" />
+        android:text="19/05/2018"
+        android:layout_alignLeft="@+id/textoTarefa" />
 </RelativeLayout>

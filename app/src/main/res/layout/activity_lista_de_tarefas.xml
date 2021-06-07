@@ -3,30 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListaDeTarefas">
+    tools:context=".ListaDeTarefasActivity">
 
     <ListView
         android:id="@+id/listaTarefas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/addTarefa"
-        android:layout_marginBottom="5dp"
-        tools:listitem="@layout/celula_tarefa"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:listitem="@layout/celula_tarefa"/>
 
     <Button
         android:id="@+id/addTarefa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginRight="-1dp"
-        android:layout_marginBottom="-3dp"
+        android:layout_centerHorizontal="true"
         android:text="Adicionar Tarefa" />
 </RelativeLayout>

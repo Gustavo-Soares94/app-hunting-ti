@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -79,7 +78,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     }
 
     public void irListaDeTarefas(View view){
-        Intent i = new Intent(getApplicationContext(), ListaDeTarefas.class);
+        Intent i = new Intent(getApplicationContext(), ListaDeTarefasActivity.class);
         startActivity(i);
     }
 

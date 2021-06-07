@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Apphuntingti">
-        <activity android:name=".ListaDeTarefas"></activity>
+        <activity
+            android:name=".ListaDeTarefasActivity"
+            android:label="Lista de Tarefas"/>
         <activity
             android:name=".AgendaDeContatosActivity"
             android:label="Agenda De Contados"

@@ -8,25 +8,26 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:text="Adicione uma tarefa"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
-        android:id="@+id/textTarefa"
+        android:id="@+id/textoTarefa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="O que deseja fazer ?"
+        android:hint="O que deseja fazer?"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/textPrazo"
+        android:id="@+id/textoPrazo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="Quando ?"
+        android:hint="Quando?"
         android:inputType="textPersonName" />
 </LinearLayout>
