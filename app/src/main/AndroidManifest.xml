@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gustavosoares.app_hunting_ti">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,13 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Apphuntingti">
-
+        <activity android:name=".ListaDeTarefas"></activity>
         <activity
             android:name=".AgendaDeContatosActivity"
             android:label="Agenda De Contados"
-            android:parentActivityName=".MenuPrincipalActivity"
-        />
-
+            android:parentActivityName=".MenuPrincipalActivity" />
         <activity
             android:name=".ContatosActivity"
             android:label="@string/contatosactivity_name"
@@ -34,11 +32,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MenuPrincipalActivity"
             android:label="@string/menuactivity_name" />
-
         <activity
             android:name=".MainActivity"
             android:label="@string/mainactivity_name" />

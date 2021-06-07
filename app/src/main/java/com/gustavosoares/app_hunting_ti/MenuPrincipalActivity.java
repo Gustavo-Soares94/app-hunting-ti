@@ -74,8 +74,12 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     }
 
     public void irAgendaDeContatos(View view){
-
         Intent i = new Intent(getApplicationContext(), AgendaDeContatosActivity.class);
+        startActivity(i);
+    }
+
+    public void irListaDeTarefas(View view){
+        Intent i = new Intent(getApplicationContext(), ListaDeTarefas.class);
         startActivity(i);
     }
 
