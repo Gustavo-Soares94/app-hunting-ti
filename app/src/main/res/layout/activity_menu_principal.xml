@@ -12,7 +12,7 @@
         android:id="@+id/bt_lista_de_tarefas"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/bt_agenda_de_contatos"
+        android:layout_below="@+id/bt_agenda_de_empresas"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
@@ -57,10 +57,10 @@
         tools:ignore="OnClick" />
 
     <Button
-        android:id="@+id/bt_vagas"
+        android:id="@+id/bt_agenda_de_empresas"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/bt_lista_de_tarefas"
+        android:layout_below="@+id/bt_agenda_de_contatos"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
@@ -71,7 +71,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:background="@drawable/custom_button"
-        android:text="Vagas"
+        android:text="Agenda de Empresas"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:backgroundTint="@color/botoes"
