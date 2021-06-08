@@ -7,21 +7,13 @@
     tools:context=".CadastroActivity"
     android:background="@color/colorLogo">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="389dp"
-        android:layout_height="198dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="59dp"
-        app:srcCompat="@drawable/logo_hunting_ti" />
-
     <EditText
         android:id="@+id/cadUsuario"
         android:layout_width="300dp"
         android:layout_height="33dp"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_user"
         android:drawableLeft="@drawable/ic_user"
@@ -84,5 +76,11 @@
         android:textAllCaps="false"
         android:textSize="18sp"
         app:backgroundTint="@color/botoes" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        app:srcCompat="@drawable/logo_huntingti" />
 
 </RelativeLayout>

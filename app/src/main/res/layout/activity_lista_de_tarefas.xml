@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListaDeTarefasActivity">
+
+    <ListView
+        android:id="@+id/listaTarefas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addTarefa"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:listitem="@layout/celula_tarefa"/>
+
+    <Button
+        android:id="@+id/addTarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Adicionar Tarefa" />
+</RelativeLayout>
