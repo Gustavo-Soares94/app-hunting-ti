@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -13,9 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Apphuntingti">
+        <activity android:name=".AgendaDeEmpresasActivity"></activity>
         <activity
             android:name=".ListaDeTarefasActivity"
-            android:label="Lista de Tarefas"/>
+            android:label="Lista de Tarefas" />
         <activity
             android:name=".AgendaDeContatosActivity"
             android:label="Agenda De Contados"
