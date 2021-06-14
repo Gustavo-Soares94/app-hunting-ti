@@ -20,10 +20,10 @@ import com.google.firebase.database.ValueEventListener;
 public class MenuPrincipalActivity extends AppCompatActivity {
 
     //Sistema de identificacao do firebase
-    private FirebaseAuth mAuth;
-    private FirebaseDatabase database;
-    private String uid;
-    private String usuario;
+    public FirebaseAuth mAuth;
+    public FirebaseDatabase database;
+    public String uid;
+    public String usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +79,11 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
     public void irListaDeTarefas(View view){
         Intent i = new Intent(getApplicationContext(), ListaDeTarefasActivity.class);
+        startActivity(i);
+    }
+
+    public void irRecados(View view){
+        Intent i = new Intent(getApplicationContext(), RecadosActivity.class);
         startActivity(i);
     }
 

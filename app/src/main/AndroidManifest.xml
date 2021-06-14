@@ -14,8 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Apphuntingti">
         <activity
+            android:name=".RecadosActivity"
+            android:label="Recados"/>
+        <activity
             android:name=".ListaDeTarefasActivity"
-            android:label="Lista de Tarefas"/>
+            android:label="Lista de Tarefas" />
         <activity
             android:name=".AgendaDeContatosActivity"
             android:label="Agenda De Contados"
