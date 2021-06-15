@@ -15,6 +15,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="18dp"
+        android:alpha="0.3"
         android:background="@null"
         app:srcCompat="@drawable/seguindo" />
 
