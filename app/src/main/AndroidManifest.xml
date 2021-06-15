@@ -29,7 +29,8 @@
         <activity
             android:name=".CadastroActivity"
             android:label="@string/cadastro" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".SplashScreen"
+            android:label="Hunting TI" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

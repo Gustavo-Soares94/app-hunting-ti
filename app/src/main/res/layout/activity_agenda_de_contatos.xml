@@ -14,6 +14,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:onClick="addContato"
+        app:backgroundTint="@color/colorGreyPrimary"
         app:srcCompat="@drawable/ic_add_contato_foreground" />
 
     <include layout="@layout/content_agenda_de_contatos" />
