@@ -2,7 +2,7 @@
 
 ## O que é?
 
-Aplicativo voltado para o público de recrutadores de TI.Realizado para a cadeira de dispositivos móveis. Uniritter
+Aplicativo voltado para o público de recrutadores de TI. Realizado para a cadeira de dispositivos móveis. Uniritter
 
 ## Funcionalidades
 
