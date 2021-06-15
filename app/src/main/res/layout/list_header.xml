@@ -62,7 +62,7 @@
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
+            android:layout_weight="15"
             android:text="Seguidores" />
 
         <Button
@@ -70,7 +70,8 @@
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="198dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
+            android:layout_weight="15"
             android:text="Novo Tweet" />
     </LinearLayout>
+
 </RelativeLayout>

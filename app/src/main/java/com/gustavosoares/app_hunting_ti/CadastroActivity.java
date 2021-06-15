@@ -73,7 +73,7 @@ public class CadastroActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
-                            DatabaseReference userRef = database.getReference("user/" + user.getUid());
+                            DatabaseReference userRef = database.getReference("users/" + user.getUid());
 
                             Map<String, Object> userInfos = new HashMap<>();
                             userInfos.put("usuario", usuario);

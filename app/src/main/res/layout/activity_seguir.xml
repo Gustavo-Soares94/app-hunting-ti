@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecadosActivity">
+    tools:context=".SeguirActivity">
 
     <ListView
-        android:id="@+id/listTwees"
+        android:id="@+id/listaSeguindo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -20,8 +20,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listheader="@layout/list_header"
-        tools:listitem="@layout/list_item"
-        />
-
+        tools:listitem="@android:layout/simple_list_item_checked" />
 </androidx.constraintlayout.widget.ConstraintLayout>
